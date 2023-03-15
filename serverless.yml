@@ -1,5 +1,5 @@
 service: notes-api
-frameworkVersion: '3'
+frameworkVersion: '2'
 
 provider:
   name: aws
@@ -13,7 +13,7 @@ functions:
     environment:
       COGNITO_USERPOOL_ID: !Ref cognitoUserPool
       COGNITO_WEB_CLIENT_ID: !Ref cognitoUserPoolWebclient
-      
+
   createNote:
     handler: handler.createNote
     environment:
